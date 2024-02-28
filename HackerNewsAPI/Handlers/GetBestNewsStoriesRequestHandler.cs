@@ -18,9 +18,9 @@ public class GetBestNewsStoriesRequest : IRequest<IEnumerable<Story>>
 // Create a handler for the request
 public class GetBestNewsStoriesRequestHandler : IRequestHandler<GetBestNewsStoriesRequest, IEnumerable<IStory>>
 {
-    private readonly IHackerNewsService _hackerNewsService;
+    private readonly HackerNewsService _hackerNewsService;
 
-    public GetBestNewsStoriesRequestHandler(IHackerNewsService hackerNewsService)
+    public GetBestNewsStoriesRequestHandler(HackerNewsService hackerNewsService)
     {
         _hackerNewsService = hackerNewsService;
     }

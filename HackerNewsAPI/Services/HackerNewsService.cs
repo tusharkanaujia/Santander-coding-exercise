@@ -19,6 +19,10 @@ namespace HackerNewsAPI.Services
             _httpClient = httpClient;
         }
 
+        public HackerNewsService()
+        {
+        }
+
         public virtual async Task<IEnumerable<IStory>> GetBestStoriesAsync(int n)
         {
             var bestStoryIds = await GetBestStoryIdsAsync();
